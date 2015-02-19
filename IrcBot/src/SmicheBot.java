@@ -146,12 +146,23 @@ public class SmicheBot extends PircBot {
 		}
 		if (message.startsWith("<squote")) {
 			String name = message.replaceAll("<squote ", "");
+			try{
+			String[] msg = message.split(",");
+			int goal = Integer.parseInt(msg[1]);
+			int atIndex = 0;
 			for (int i = log.size() - 1; i > 0; i--) {
 				if ((log.get(i)).sender.equalsIgnoreCase(name)) {
+					atIndex++;
+					if(atIndex==goal){
 					writeLog(log.get(i));
 					sendMessage(channel, "Quote saved with number: " + logLines);
 					break;
+					}
+					
 				}
+			}
+			} catch (Exception e){
+				
 			}
 		}
 		if (message.startsWith("<pquote")) {
@@ -196,7 +207,7 @@ public class SmicheBot extends PircBot {
 		}
 		}
 		if (message.startsWith("<getlog")) {
-			String integer = message.replaceAll("<getLog ", "");
+			String integer = message.replaceAll("<getlog ", "");
 			try {
 				int num = Integer.parseInt(integer);
 				sendMessage(channel,
