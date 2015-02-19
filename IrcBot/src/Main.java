@@ -1,5 +1,6 @@
 import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -7,6 +8,8 @@ import org.jibble.pircbot.IrcException;
 import org.jibble.pircbot.NickAlreadyInUseException;
 
 import java.awt.Color;
+import java.awt.HeadlessException;
+import java.awt.Image;
 
 import javax.swing.JTextField;
 import javax.swing.JLabel;
@@ -98,12 +101,28 @@ public class Main extends JFrame
   {
    UIManager.setLookAndFeel("com.jtattoo.plaf.acryl.AcrylLookAndFeel");
    
+   
+   
+   
    Main frame = new Main();
    frame.setBounds(310,280,310,280);
    frame.setVisible(true);
     
 
   }
+  
+  private static Image getIcon() throws HeadlessException {
+      Image img = null;
+      try {
+              img = ImageIO.read(Main.class.getResource("/resources/icon.png"));
+      } catch (IOException e2) {
+              e2.printStackTrace();
+      }
+      
+      return img;
+      
+      
+}
   
   static void startBot(String network, String nick ,String channel) throws Exception{ //smooth
 	    bot = new SmicheBot(nick);
