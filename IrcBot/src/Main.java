@@ -10,6 +10,8 @@ import org.jibble.pircbot.NickAlreadyInUseException;
 import java.awt.Color;
 import java.awt.HeadlessException;
 import java.awt.Image;
+import java.awt.SystemTray;
+import java.awt.TrayIcon;
 
 import javax.swing.JTextField;
 import javax.swing.JLabel;
@@ -17,11 +19,17 @@ import javax.swing.JButton;
 import javax.swing.UIManager;
 
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 public class Main extends JFrame
-{
+{	
+	static Main frame;
+	static TrayIcon icon;
 	public Main() {
 		setTitle("SmiBot");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -100,21 +108,55 @@ public class Main extends JFrame
     throws Exception
   {
    UIManager.setLookAndFeel("com.jtattoo.plaf.acryl.AcrylLookAndFeel");
-   
-   
-   
-   
-   Main frame = new Main();
-   frame.setBounds(310,280,310,280);
-   frame.setVisible(true);
-    
 
+
+   
+   frame = new Main();
+      
+   icon = new TrayIcon(getIcon(),
+           
+           "SmiBot");
+
+   icon.addActionListener(new ActionListener() {
+
+      public void actionPerformed(ActionEvent e) {
+          frame.setVisible(true);
+      }
+
+   });
+   
+   SystemTray.getSystemTray().add(icon);
+   
+   frame.setBounds(310,280,310,280);
+   frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+   frame.setIconImage(getIcon());
+   frame.setResizable(false);
+   frame.addWindowListener(new WindowListener() {
+       public void windowClosed(WindowEvent arg0) {
+               frame.setVisible(false);
+       }
+       public void windowActivated(WindowEvent arg0) {
+       }
+       public void windowClosing(WindowEvent arg0) {
+               frame.setVisible(false);
+       }
+       public void windowDeactivated(WindowEvent arg0) {
+       }
+       public void windowDeiconified(WindowEvent arg0) {
+       }
+       public void windowIconified(WindowEvent arg0) {
+       }
+       public void windowOpened(WindowEvent arg0) {
+       }
+   });
+   frame.setVisible(true);
+   
   }
   
   private static Image getIcon() throws HeadlessException {
       Image img = null;
       try {
-              img = ImageIO.read(Main.class.getResource("/resources/icon.png"));
+              img = ImageIO.read(Main.class.getResource("\\resources\\icon.png"));
       } catch (IOException e2) {
               e2.printStackTrace();
       }
