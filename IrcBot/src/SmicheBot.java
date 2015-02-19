@@ -142,7 +142,7 @@ public class SmicheBot extends PircBot {
 			sendMessage(channel, response);
 		}
 		if (message.equalsIgnoreCase("<help")) {
-			sendMessage(channel, "Supported commands are:time, talk,");
+			sendMessage(channel, "Supported commands are: time, talk, translate, squote, pquote, getlog");
 		}
 		if (message.startsWith("<squote")) {
 			String name = message.replaceAll("<squote ", "");
@@ -164,6 +164,27 @@ public class SmicheBot extends PircBot {
 		}
 		if ((message.startsWith("<translate"))
 				|| (message.equalsIgnoreCase("<translate"))) {
+			String txt = message.replaceAll("<translate ", "");
+			if(txt.equalsIgnoreCase("fi")){
+				try {
+					String msg = (log.get(log.size() - 1)).message;
+					System.out.println("message is:" + msg);
+					String text = translate.translate(msg, "en", "fi");
+					sendMessage(channel, (log.get(log.size() - 1)).sender + ": "
+							+ text);
+				} catch (Exception localException2) {
+				}
+			} else if(txt.equalsIgnoreCase("en")){
+				try {
+					String msg = (log.get(log.size() - 1)).message;
+					System.out.println("message is:" + msg);
+					String text = translate.translate(msg, "fi", "en");
+					sendMessage(channel, (log.get(log.size() - 1)).sender + ": "
+							+ text);
+				} catch (Exception localException2) {
+				}
+			} else {
+			
 			try {
 				String msg = (log.get(log.size() - 1)).message;
 				System.out.println("message is:" + msg);
@@ -173,7 +194,8 @@ public class SmicheBot extends PircBot {
 			} catch (Exception localException2) {
 			}
 		}
-		if (message.startsWith("<getLog")) {
+		}
+		if (message.startsWith("<getlog")) {
 			String integer = message.replaceAll("<getLog ", "");
 			try {
 				int num = Integer.parseInt(integer);
