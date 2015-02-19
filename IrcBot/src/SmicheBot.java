@@ -27,7 +27,7 @@ public class SmicheBot
   ArrayList<Message> log;
   int logLines;
   
-  public SmicheBot()
+  public SmicheBot(String name)
   {
     new Thread(new Runnable()
     {
@@ -111,7 +111,7 @@ public class SmicheBot
     }) {}.start();
     countLines();
     log = new ArrayList();
-    setName("SmiBot");
+    setName(name);
     ChatterBotFactory factory = new ChatterBotFactory();
     translate = Translator.getInstance();
     bot1 = null;
