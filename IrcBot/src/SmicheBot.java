@@ -145,24 +145,25 @@ public class SmicheBot extends PircBot {
 			sendMessage(channel, "Supported commands are: time, talk, translate, squote, pquote, getlog");
 		}
 		if (message.startsWith("<squote")) {
-			String name = message.replaceAll("<squote ", "");
+			String init = message.replaceAll("<squote ", "");
 			try{
-			String[] msg = message.split(",");
+			String[] msg = init.split(",");
+			String name = msg[0];
 			int goal = Integer.parseInt(msg[1]);
 			int atIndex = 0;
 			for (int i = log.size() - 1; i > 0; i--) {
 				if ((log.get(i)).sender.equalsIgnoreCase(name)) {
-					atIndex++;
+					
 					if(atIndex==goal){
 					writeLog(log.get(i));
 					sendMessage(channel, "Quote saved with number: " + logLines);
 					break;
 					}
-					
+					atIndex++;
 				}
 			}
 			} catch (Exception e){
-				
+				e.printStackTrace();
 			}
 		}
 		if (message.startsWith("<pquote")) {
