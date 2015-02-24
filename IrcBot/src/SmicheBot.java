@@ -43,7 +43,6 @@ public class SmicheBot extends PircBot {
 		news = new ArrayList<String>();
 		om = new OmBot(channel);
 		this.channel = channel;
-
 		streams = new ArrayList();
 		streams.add(new TwitchStream("smichess"));
 		streams.add(new TwitchStream("budheim"));
