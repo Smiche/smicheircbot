@@ -103,7 +103,7 @@ public class Main extends JFrame {
 		getContentPane().add(btnNewButton_1);
 	}
 
-	static SmicheBot bot;
+	public static SmicheBot bot;
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -198,10 +198,11 @@ public class Main extends JFrame {
 
 	static void startBot(String network, String nick, String channel)
 			throws Exception { // smooth
-		bot = new SmicheBot(nick);
+		bot = new SmicheBot(nick, channel);
 		bot.setVerbose(true);
 		bot.connect(network);
 		bot.joinChannel(channel);
+		bot.joinChannel("#uutiset");
 	}
 
 	static void stopBot() {

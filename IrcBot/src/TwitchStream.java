@@ -5,4 +5,12 @@ public class TwitchStream {
 	public TwitchStream(String chan) {
 		this.channel = chan;
 	}
+	
+	public void setOffline(){
+		isOnline = false;
+	}
+	
+	public void setOnline(){
+		isOnline = true;
+	}
 }
