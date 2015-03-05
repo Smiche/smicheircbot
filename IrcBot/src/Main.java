@@ -46,7 +46,6 @@ public class Main extends JFrame {
 		// setFont(new Font("Aharoni", Font.PLAIN, 12));
 		getContentPane().setBackground(Color.BLACK);
 		getContentPane().setLayout(null);
-
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		tabbedPane.setBounds(-1, 0, 306, 254);
 		getContentPane().add(tabbedPane);
@@ -202,6 +201,7 @@ public class Main extends JFrame {
 	private JTextArea textArea;
 
 	public static void main(String[] args) throws Exception {
+		
 		UIManager.setLookAndFeel("com.jtattoo.plaf.acryl.AcrylLookAndFeel");
 
 		frame = new Main();

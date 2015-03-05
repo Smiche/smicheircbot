@@ -6,12 +6,13 @@ public class Message {
 	String message;
 	Timestamp timestamp;
 	String timeString;
-
+	String fullLog;
 	public Message(String from, String text) {
 		this.sender = from;
 		this.message = text;
 		Date date = new Date();
 		this.timestamp = new Timestamp(date.getTime());
 		this.timeString = this.timestamp.toString();
+		fullLog = "<" + timeString+ ">"+ sender+": "+message;
 	}
 }

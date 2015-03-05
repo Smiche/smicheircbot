@@ -67,15 +67,15 @@ public class SmicheBot extends PircBot {
 
 			public void run() {
 				String chan = SmicheBot.channel;
-				while(true)
-				try {
+				while (true)
+					try {
 						Thread.sleep(45000);
 						for (int i = 0; i < streams.size(); i++) {
 							sendGet((streams.get(i)).channel, i, chan);
+						}
+					} catch (Exception e) {
+						e.printStackTrace();
 					}
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
 			}
 
 			private void sendGet(String stream, int num, String chan)
@@ -84,26 +84,26 @@ public class SmicheBot extends PircBot {
 				URL obj = new URL(url);
 				HttpURLConnection con = (HttpURLConnection) obj
 						.openConnection();
-				
+
 				con.setRequestMethod("GET");
 
 				con.setRequestProperty("User-Agent", "Mozilla/5.0");
 
 				int responseCode = con.getResponseCode();
 				System.out.println("\nSending 'GET' request to URL : " + url);
-				//txtLog("sending get to url: " + url);
+				// txtLog("sending get to url: " + url);
 				BufferedReader in = new BufferedReader(new InputStreamReader(
 						con.getInputStream()));
 
 				StringBuffer response = new StringBuffer();
 				String line;
 				if ((line = in.readLine()).contains("\"stream\":null")) {
-					//txtLog("isNull!");
-					//txtLog(line);
+					// txtLog("isNull!");
+					// txtLog(line);
 					streams.get(num).setOffline();
 				} else if (!streams.get(num).isOnline) {
-					//txtLog(line);
-					//txtLog("isOnline!");
+					// txtLog(line);
+					// txtLog("isOnline!");
 					sendMessage(chan, stream + "'s stream is up!"
 							+ " The stream link: " + "http://www.twitch.tv/"
 							+ streams.get(num).channel);
@@ -146,6 +146,22 @@ public class SmicheBot extends PircBot {
 			return;
 		} else {
 			if (!message.startsWith("<")) {
+				try {
+					final String send = sender;
+					final String msg = message;
+					new Thread(new Runnable(){
+						@Override
+						public void run() {
+						PhpConnector.doConnection(new Message(send, msg).fullLog);
+						}
+					}){
+					}.run();
+
+					
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if (log.size() < 120) {
 					log.add(new Message(sender, message));
 				} else {
@@ -158,16 +174,24 @@ public class SmicheBot extends PircBot {
 				return;
 			}
 			if (message.equalsIgnoreCase("<uutiset")) {
-				if(news.size()>0)
-				sendMessage(channel, news.get(news.size()-1));
-			} else if(message.startsWith("<uutiset ")){
-				String numText = message.replaceAll("<uutiset ","");
+				if (news.size() > 0)
+					sendMessage(channel, news.get(news.size() - 1));
+			} else if(message.equalsIgnoreCase("<history")){
+					sendMessage(channel, "Log can be found at: http://goo.gl/otFpW1");
+			} else if (message.startsWith("<addstream ")) {
+				String msg = message.replaceAll("<addstream ", "");
+				if (msg != null) {
+					streams.add(new TwitchStream(msg));
+				}
+
+			} else if (message.startsWith("<uutiset ")) {
+				String numText = message.replaceAll("<uutiset ", "");
 				int num = 0;
-				try{
+				try {
 					num = Integer.parseInt(numText);
 					sendMessage(channel, news.get(num));
-				} catch(Exception e){
-					
+				} catch (Exception e) {
+
 				}
 			} else if (message.equalsIgnoreCase("<time")) {
 				String time = new Date().toString();
@@ -186,10 +210,11 @@ public class SmicheBot extends PircBot {
 			} else if (message.equalsIgnoreCase("<help")) {
 				sendMessage(
 						channel,
-						"Supported commands are: time, uutiset, talk, translate, squote, pquote, getlog, 9gag, o new, o, o stop");
+						"Supported commands are: time, uutiset, talk, translate, streams, squote, pquote, getlog, 9gag, o new, o, o stop");
 				return;
-			}
-			if (message.startsWith("<o ")) {
+			} else if (message.equalsIgnoreCase("<streams")) {
+				sendMessage(channel, getStreams());
+			} else if (message.startsWith("<o ")) {
 				if (message.equalsIgnoreCase("<o new")) {
 					try {
 						om.newConversation();
@@ -292,6 +317,18 @@ public class SmicheBot extends PircBot {
 			}
 			return;
 		}
+	}
+
+	public String getStreams() {
+		String a = "Online streams are:";
+		for (int i = 0; i < streams.size(); i++) {
+			if (streams.get(i).isOnline) {
+				a += " " + streams.get(i).channel;
+			}
+		}
+
+		return a;
+
 	}
 
 	public void writeLog(Message message) {
