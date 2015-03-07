@@ -146,22 +146,7 @@ public class SmicheBot extends PircBot {
 			return;
 		} else {
 			if (!message.startsWith("<")) {
-				try {
-					final String send = sender;
-					final String msg = message;
-					new Thread(new Runnable(){
-						@Override
-						public void run() {
-						PhpConnector.doConnection(new Message(send, msg).fullLog);
-						}
-					}){
-					}.run();
-
-					
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				writeLog(new Message(sender, message));
 				if (log.size() < 120) {
 					log.add(new Message(sender, message));
 				} else {
@@ -177,7 +162,7 @@ public class SmicheBot extends PircBot {
 				if (news.size() > 0)
 					sendMessage(channel, news.get(news.size() - 1));
 			} else if(message.equalsIgnoreCase("<history")){
-					sendMessage(channel, "Log can be found at: http://goo.gl/otFpW1");
+					sendMessage(channel, PastebinLog.send());
 			} else if (message.startsWith("<addstream ")) {
 				String msg = message.replaceAll("<addstream ", "");
 				if (msg != null) {
@@ -210,7 +195,7 @@ public class SmicheBot extends PircBot {
 			} else if (message.equalsIgnoreCase("<help")) {
 				sendMessage(
 						channel,
-						"Supported commands are: time, uutiset, talk, translate, streams, squote, pquote, getlog, 9gag, o new, o, o stop");
+						"Supported commands are: time, uutiset, talk, translate, streams, squote, pquote, getlog, 9gag, o new, o, o stop, history, addstream");
 				return;
 			} else if (message.equalsIgnoreCase("<streams")) {
 				sendMessage(channel, getStreams());
@@ -252,7 +237,7 @@ public class SmicheBot extends PircBot {
 						if ((log.get(i)).sender.equalsIgnoreCase(name)) {
 
 							if (atIndex == goal) {
-								writeLog(log.get(i));
+								writeQuote(log.get(i));
 								sendMessage(channel,
 										"Quote saved with number: " + logLines);
 								break;
@@ -331,10 +316,28 @@ public class SmicheBot extends PircBot {
 
 	}
 
-	public void writeLog(Message message) {
+	public void writeQuote(Message message) {
 		PrintWriter pw = null;
 		try {
 			File file = new File("quotes.txt");
+			FileWriter fw = new FileWriter(file, true);
+			pw = new PrintWriter(fw);
+			pw.println("<" + message.timeString + ">" + message.sender + ": "
+					+ message.message);
+			logLines += 1;
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (pw != null) {
+				pw.close();
+			}
+		}
+	}
+	
+	public void writeLog(Message message) {
+		PrintWriter pw = null;
+		try {
+			File file = new File("log.txt");
 			FileWriter fw = new FileWriter(file, true);
 			pw = new PrintWriter(fw);
 			pw.println("<" + message.timeString + ">" + message.sender + ": "

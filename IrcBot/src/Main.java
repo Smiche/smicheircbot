@@ -201,7 +201,6 @@ public class Main extends JFrame {
 	private JTextArea textArea;
 
 	public static void main(String[] args) throws Exception {
-		
 		UIManager.setLookAndFeel("com.jtattoo.plaf.acryl.AcrylLookAndFeel");
 
 		frame = new Main();
@@ -295,8 +294,10 @@ public class Main extends JFrame {
 		bot = new SmicheBot(nick, channel);
 		bot.setVerbose(true);
 		bot.connect(network);
+		//bot.set
 		bot.joinChannel(channel);
 		bot.joinChannel("#uutiset");
+		DailyTask.setTask();
 	}
 
 	static void stopBot() {

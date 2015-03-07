@@ -8,10 +8,19 @@ import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLEncoder;
 
+
+/**
+ * 
+ *@author Alexander
+ *@deprecated
+ */
 public class PhpConnector
 {
+	/**
+	 * 
+	 * Sends text to php script.
+	 */
     public static void doConnection(String text){
-
        URL targetURL = null;
 	try {
 		targetURL = new URL("http://ircsmibot.byethost18.com/writeLogToText.php");
