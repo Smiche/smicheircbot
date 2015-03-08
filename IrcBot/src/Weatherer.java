@@ -34,7 +34,7 @@ public class Weatherer {
             return "Kaupunkia ei löytynyt";
         } else {
         	
-        	return ""+cw.getMainInstance().getTemperature()+" "+cw.objectDesc.optString("description");
+        	return ""+cw.getMainInstance().getTemperature()+"°C "+cw.objectDesc.optString("description");
            // System.out.println();
         }
 		//return "";

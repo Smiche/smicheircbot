@@ -193,7 +193,7 @@ public class SmicheBot extends PircBot {
 				}
 
 			} else if(message.equalsIgnoreCase("<credits")){
-				sendMessage(channel,"Created by Smiche, translation by zetori, heavy testing by KevytMaito. Thank you all.");
+				sendMessage(channel,"Luonut Smiche, kääntänyt zetori, testannut kevytmaito. Kiitos kaikille.");
 			} else if (message.startsWith("<uutiset ")) {
 				String numText = message.replaceAll("<uutiset ", "");
 				int num = 0;
