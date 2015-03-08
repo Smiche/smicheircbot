@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
@@ -208,7 +209,7 @@ public class Main extends JFrame {
 
 		icon = new TrayIcon(getIcon(),
 
-		"SmiBot", createPopupMenu());
+		"SmiBotti", createPopupMenu());
 
 		icon.addActionListener(new ActionListener() {
 
@@ -255,8 +256,7 @@ public class Main extends JFrame {
 	private static Image getIcon() throws HeadlessException {
 		Image img = null;
 		try {
-			System.out.println(Main.class.getResource("/resources/icon.png").toString());
-			img = ImageIO.read(Main.class.getResource("/resources/icon.png"));
+			img = ImageIO.read(Main.class.getResource("/src/resources/icon.png"));
 			
 		} catch (IOException e2) {
 			e2.printStackTrace();
@@ -295,7 +295,7 @@ public class Main extends JFrame {
 			throws Exception { // smooth
 		
 		String log4jConfPath = "/resources/log4j.properties";
-		PropertyConfigurator.configure(Main.class.getResource("/resources/log4j.properties"));
+		PropertyConfigurator.configure(Main.class.getResource("/src/resources/log4j.properties"));
 		chan = channel;
 		bot = new SmicheBot(nick, channel);
 		bot.setVerbose(true);
