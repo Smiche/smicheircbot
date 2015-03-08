@@ -255,7 +255,9 @@ public class Main extends JFrame {
 	private static Image getIcon() throws HeadlessException {
 		Image img = null;
 		try {
+			System.out.println(Main.class.getResource("/resources/icon.png").toString());
 			img = ImageIO.read(Main.class.getResource("/resources/icon.png"));
+			
 		} catch (IOException e2) {
 			e2.printStackTrace();
 		}

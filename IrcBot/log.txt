@@ -37,3 +37,18 @@
 <2015-03-08 15:11:34.877>Smiche: oh no spacing
 <2015-03-08 15:15:59.496>Siika: moi
 <2015-03-08 15:55:52.19>Smiche: 25 mins left, I pray
+<2015-03-08 16:20:26.95>morzz: лол
+<2015-03-08 16:20:31.172>morzz: lol
+<2015-03-08 16:22:20.008>Smiche: gj bot I�m proud
+<2015-03-08 16:23:38.358>Smiche: morzz check this out
+<2015-03-08 16:23:53.074>morzz: nice
+<2015-03-08 16:24:32.872>Pate5: aach nice weather
+<2015-03-08 16:24:42.924>morzz: yes sumu > selke�
+<2015-03-08 16:24:43.906>Smiche: no idea if it's correct
+<2015-03-08 16:25:07.262>morzz: lol are you sure its accurate enought
+<2015-03-08 16:25:14.401>Smiche: not really
+<2015-03-08 16:25:20.531>morzz: enought decimals imo
+<2015-03-08 16:25:44.493>Smiche: decimals are there cause of the conversion I suppose
+<2015-03-08 16:26:09.271>Smiche: http://openweathermap.org/
+<2015-03-08 16:26:09.494>botti: 0,10  OpenWeatherMap current weather and forecast
+<2015-03-08 16:26:25.89>Smiche: fetching from there
