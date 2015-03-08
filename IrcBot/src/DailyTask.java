@@ -1,41 +1,71 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class DailyTask extends TimerTask {
-  Thread myThreadObj;
-  DailyTask (Thread t){
-   this.myThreadObj=t;
-  }
-  public void run() {
-   myThreadObj.start();
-  }
-  
-  public static void setTask(){
-	  Timer timer = new Timer();
-	  Thread myThread= new Thread(new Runnable(){
+import org.quartz.JobDetail;
+import org.quartz.Scheduler; 
+import org.quartz.SchedulerException; 
+import org.quartz.SchedulerFactory;
+import org.quartz.Trigger;
+import org.quartz.impl.StdSchedulerFactory; 
 
-		@Override
-		public void run() {
-			Main.bot.sendMsg("#kukko", "420blazeit");
-			return;
-		}
-		  
-	  });// Your thread
-	  Calendar date = Calendar.getInstance();
-	  date.set(
-	    Calendar.DAY_OF_WEEK,Calendar.AM_PM
-	   // Calendar.
-	  );
-	  date.set(Calendar.HOUR,4);
-	  date.set(Calendar.MINUTE, 20);
-	  date.set(Calendar.SECOND, 0);
-	  date.set(Calendar.MILLISECOND, 0);
-	  // Schedule to run every Sunday in midnight
-	  timer.schedule(
-	    new DailyTask (myThread),
-	    date.getTime(),
-	    1000 * 60 * 60 * 24 *7
-	  );
+import static org.quartz.JobBuilder.*; 
+import static org.quartz.TriggerBuilder.*; 
+import static org.quartz.SimpleScheduleBuilder.*;
+
+public class DailyTask{
+  
+  public static void setTask() throws SchedulerException{
+	  SchedulerFactory schedFact = new org.quartz.impl.StdSchedulerFactory(); 
+	  Scheduler sched = schedFact.getScheduler(); 
+	  sched.start(); 
+	  // define the job and tie it to our HelloJob class 
+	  JobDetail job = newJob(Task420.class) 
+	      .withIdentity("myJob", "group1") 
+	      .build(); 
+	  // Trigger the job to run now, and then every 40 seconds 
+	  Date date = new Date();
+	  date.setHours(4);
+	  date.setMinutes(20);
+	  date.setSeconds(0);
+	  DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+	  System.out.println(dateFormat.format(date));
+	  Trigger trigger = newTrigger() 
+	      .withIdentity("myTrigger", "group1") 
+	      .startAt(date)
+	      .withSchedule(simpleSchedule() 
+	          .withIntervalInHours(12)
+	          .repeatForever()) 
+	      .build(); 
+	  // Tell quartz to schedule the job using our trigger 
+	  sched.scheduleJob(job, trigger);
+  }
+  public static void setTask2() throws SchedulerException{
+	  SchedulerFactory schedFact = new org.quartz.impl.StdSchedulerFactory(); 
+	  Scheduler sched = schedFact.getScheduler(); 
+	  sched.start(); 
+	  // define the job and tie it to our HelloJob class 
+	  JobDetail job = newJob(TaskFirst.class) 
+	      .withIdentity("myJob", "group1") 
+	      .build(); 
+	  // Trigger the job to run now, and then every 40 seconds 
+	  Date date = new Date();
+	  date.setHours(12);
+	  date.setMinutes(0);
+	  date.setSeconds(0);
+	  DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+	  System.out.println(dateFormat.format(date));
+	  Trigger trigger = newTrigger() 
+	      .withIdentity("myTrigger", "group1") 
+	      .startAt(date)
+	      .withSchedule(simpleSchedule() 
+	          .withIntervalInHours(12)
+	          .repeatForever()) 
+	      .build(); 
+	  // Tell quartz to schedule the job using our trigger 
+	  sched.scheduleJob(job, trigger);
   }
 }

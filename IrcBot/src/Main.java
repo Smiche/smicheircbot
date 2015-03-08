@@ -6,6 +6,7 @@ import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.jibble.pircbot.IrcException;
 import org.jibble.pircbot.NickAlreadyInUseException;
 
@@ -41,7 +42,7 @@ public class Main extends JFrame {
 	static TrayIcon icon;
 	static String chan;
 	public Main() {
-		setTitle("SmiBot");
+		setTitle("SmiBotti");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// setFont(new Font("Aharoni", Font.PLAIN, 12));
 		getContentPane().setBackground(Color.BLACK);
@@ -52,7 +53,7 @@ public class Main extends JFrame {
 
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.BLACK);
-		tabbedPane.addTab("Settings", null, panel, null);
+		tabbedPane.addTab("Asetukset", null, panel, null);
 		panel.setLayout(null);
 
 		txtIrcquakenetorg = new JTextField();
@@ -61,7 +62,7 @@ public class Main extends JFrame {
 		txtIrcquakenetorg.setColumns(10);
 		panel.add(txtIrcquakenetorg);
 
-		JLabel label = new JLabel("Network:");
+		JLabel label = new JLabel("Verkko:");
 		label.setBounds(10, 7, 111, 17);
 		label.setForeground(Color.GREEN);
 		panel.add(label);
@@ -72,23 +73,23 @@ public class Main extends JFrame {
 		txtkukko.setColumns(10);
 		panel.add(txtkukko);
 
-		JLabel label_1 = new JLabel("Channel:");
+		JLabel label_1 = new JLabel("Kanava:");
 		label_1.setBounds(7, 96, 114, 17);
 		label_1.setForeground(Color.GREEN);
 		panel.add(label_1);
 
-		JLabel label_2 = new JLabel("Bot nick:");
-		label_2.setBounds(168, 5, 86, 20);
+		JLabel label_2 = new JLabel("Botin nimimerkki:");
+		label_2.setBounds(168, 5, 102, 20);
 		label_2.setForeground(Color.GREEN);
 		panel.add(label_2);
 
 		txtSmibot = new JTextField();
-		txtSmibot.setText("SmiBot");
+		txtSmibot.setText("SmiBotti");
 		txtSmibot.setBounds(168, 35, 86, 20);
 		txtSmibot.setColumns(10);
 		panel.add(txtSmibot);
 
-		JButton button = new JButton("Start");
+		JButton button = new JButton("Aloita");
         button.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent arg0) {
@@ -108,7 +109,7 @@ public class Main extends JFrame {
 		button.setBounds(7, 180, 57, 23);
 		panel.add(button);
 
-		JButton button_1 = new JButton("Stop");
+		JButton button_1 = new JButton("Lopeta");
         button_1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -123,10 +124,10 @@ public class Main extends JFrame {
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.BLACK);
-		tabbedPane.addTab("Talk", null, panel_1, null);
+		tabbedPane.addTab("Puhu", null, panel_1, null);
 		panel_1.setLayout(null);
 		
-		JLabel lblTextInput = new JLabel("Text input:");
+		JLabel lblTextInput = new JLabel("Tekstinsyöttö:");
 		lblTextInput.setForeground(Color.GREEN);
 		lblTextInput.setBounds(10, 11, 85, 14);
 		panel_1.add(lblTextInput);
@@ -137,7 +138,7 @@ public class Main extends JFrame {
 		textArea.setBounds(10, 36, 270, 120);
 		panel_1.add(textArea);
 		
-		JButton btnSubmit = new JButton("Submit");
+		JButton btnSubmit = new JButton("Lähetä");
 		btnSubmit.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
@@ -152,7 +153,7 @@ public class Main extends JFrame {
 		btnSubmit.setBounds(10, 167, 89, 23);
 		panel_1.add(btnSubmit);
 		
-		JLabel lblPleaseUseAppropriate = new JLabel("Please use appropriate\r\n language!");
+		JLabel lblPleaseUseAppropriate = new JLabel("Käytä asianmukaista kieltä!");
 		lblPleaseUseAppropriate.setForeground(Color.GREEN);
 		lblPleaseUseAppropriate.setBounds(10, 192, 270, 23);
 		panel_1.add(lblPleaseUseAppropriate);
@@ -269,7 +270,7 @@ public class Main extends JFrame {
 
 		PopupMenu menu = new PopupMenu();
 
-		MenuItem exit = new MenuItem("Stop & Exit");
+		MenuItem exit = new MenuItem("Lopeta & Poistu");
 
 		exit.addActionListener(new ActionListener() {
 
@@ -290,6 +291,9 @@ public class Main extends JFrame {
 
 	static void startBot(String network, String nick, String channel)
 			throws Exception { // smooth
+		
+		String log4jConfPath = "/resources/log4j.properties";
+		PropertyConfigurator.configure(Main.class.getResource("/resources/log4j.properties"));
 		chan = channel;
 		bot = new SmicheBot(nick, channel);
 		bot.setVerbose(true);
@@ -297,7 +301,6 @@ public class Main extends JFrame {
 		//bot.set
 		bot.joinChannel(channel);
 		bot.joinChannel("#uutiset");
-		DailyTask.setTask();
 	}
 
 	static void stopBot() {

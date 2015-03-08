@@ -25,6 +25,7 @@ import main.java.com.google.code.chatterbotapi.ChatterBotType;
 
 import org.jibble.pircbot.PircBot;
 import org.nikki.omegle.core.OmegleException;
+import org.quartz.SchedulerException;
 
 public class SmicheBot extends PircBot {
 	ChatterBot bot1;
@@ -38,7 +39,7 @@ public class SmicheBot extends PircBot {
 	ArrayList<String> news;
 	ArrayList<TwitchStream> streams;
 	Runnable twitchChecker;
-
+	
 	public SmicheBot(String name, String channel) {
 		news = new ArrayList<String>();
 		om = new OmBot(channel);
@@ -90,7 +91,7 @@ public class SmicheBot extends PircBot {
 				con.setRequestProperty("User-Agent", "Mozilla/5.0");
 
 				int responseCode = con.getResponseCode();
-				System.out.println("\nSending 'GET' request to URL : " + url);
+				//System.out.println("\nSending 'GET' request to URL : " + url);
 				// txtLog("sending get to url: " + url);
 				BufferedReader in = new BufferedReader(new InputStreamReader(
 						con.getInputStream()));
@@ -104,8 +105,8 @@ public class SmicheBot extends PircBot {
 				} else if (!streams.get(num).isOnline) {
 					// txtLog(line);
 					// txtLog("isOnline!");
-					sendMessage(chan, stream + "'s stream is up!"
-							+ " The stream link: " + "http://www.twitch.tv/"
+					sendMessage(chan, stream + " striimi on p‰‰ll‰!"
+							+ " Link: " + "http://www.twitch.tv/"
 							+ streams.get(num).channel);
 					streams.get(num).setOnline();
 				}
@@ -129,7 +130,7 @@ public class SmicheBot extends PircBot {
 		}
 		botSession = bot1.createSession();
 		try {
-			System.out.println(botSession.think("hi"));
+			System.out.println(botSession.think("moi"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -138,7 +139,24 @@ public class SmicheBot extends PircBot {
 	public void sendMsg(String channel, String message) {
 		sendMessage(channel, message);
 	}
-
+	
+	public void onJoin(String channel,
+            String sender,
+            String login,
+            String hostname){
+		if(channel.equals(this.channel) && sender.equals(getNick())){
+			sendMessage(channel, "SmiBotti final 15.3.8 has joined. Use <help to see the avaliable commands.");
+			
+			try {
+				DailyTask.setTask();
+				DailyTask.setTask2();
+			} catch (SchedulerException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+	}
 	public void onMessage(String channel, String sender, String login,
 			String hostname, String message) {
 		if (channel.equals("#uutiset")) {
@@ -161,14 +179,21 @@ public class SmicheBot extends PircBot {
 			if (message.equalsIgnoreCase("<uutiset")) {
 				if (news.size() > 0)
 					sendMessage(channel, news.get(news.size() - 1));
+			} else if(message.startsWith("<s‰‰ ") || message.startsWith("<saa ")){
+				String city = message.replaceAll("<s‰‰ ", "");
+				city = message.replaceAll("<saa ","");
+				sendMessage(channel, Weatherer.getWeather(city));
 			} else if(message.equalsIgnoreCase("<history")){
 					sendMessage(channel, PastebinLog.send());
-			} else if (message.startsWith("<addstream ")) {
+			} else if (message.startsWith("<lisaastream ") || message.startsWith("<lis‰‰stream ")) {
 				String msg = message.replaceAll("<addstream ", "");
+				msg = message.replaceAll("<lis‰‰stream ","");
 				if (msg != null) {
 					streams.add(new TwitchStream(msg));
 				}
 
+			} else if(message.equalsIgnoreCase("<credits")){
+				sendMessage(channel,"Created by Smiche, translation by zetori, heavy testing by KevytMaito. Thank you all.");
 			} else if (message.startsWith("<uutiset ")) {
 				String numText = message.replaceAll("<uutiset ", "");
 				int num = 0;
@@ -178,13 +203,13 @@ public class SmicheBot extends PircBot {
 				} catch (Exception e) {
 
 				}
-			} else if (message.equalsIgnoreCase("<time")) {
+			} else if (message.equalsIgnoreCase("<aika")) {
 				String time = new Date().toString();
 				sendMessage(channel, sender + ": The time is now " + time);
 				return;
-			} else if (message.startsWith("<talk")) {
-				String s = message.replaceAll("<talk ", "");
-				String response = "not reachable!!!";
+			} else if (message.startsWith("<puhu")) {
+				String s = message.replaceAll("<puhu ", "");
+				String response = "ei saavutettavissa!!!";
 				try {
 					response = botSession.think(s);
 				} catch (Exception e) {
@@ -195,19 +220,19 @@ public class SmicheBot extends PircBot {
 			} else if (message.equalsIgnoreCase("<help")) {
 				sendMessage(
 						channel,
-						"Supported commands are: time, uutiset, talk, translate, streams, squote, pquote, getlog, 9gag, o new, o, o stop, history, addstream");
+						"Tuetut komennot ovat: aika, uutiset, puhu, k‰‰nn‰, striimit, slainaus, plainaus, 9gag, o uusi, o, o lopeta, history, lis‰‰stream, s‰‰, credits");
 				return;
-			} else if (message.equalsIgnoreCase("<streams")) {
+			} else if (message.equalsIgnoreCase("<striimit")) {
 				sendMessage(channel, getStreams());
 			} else if (message.startsWith("<o ")) {
-				if (message.equalsIgnoreCase("<o new")) {
+				if (message.equalsIgnoreCase("<o uusi")) {
 					try {
 						om.newConversation();
 					} catch (OmegleException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-				} else if (message.equalsIgnoreCase("<o stop")) {
+				} else if (message.equalsIgnoreCase("<o lopeta")) {
 					om.stop();
 				} else {
 					String msg = message.replaceAll("<o ", "");
@@ -226,8 +251,8 @@ public class SmicheBot extends PircBot {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-			} else if (message.startsWith("<squote")) {
-				String init = message.replaceAll("<squote ", "");
+			} else if (message.startsWith("<slainaus")) {
+				String init = message.replaceAll("<slainaus ", "");
 				try {
 					String[] msg = init.split(",");
 					String name = msg[0];
@@ -239,7 +264,7 @@ public class SmicheBot extends PircBot {
 							if (atIndex == goal) {
 								writeQuote(log.get(i));
 								sendMessage(channel,
-										"Quote saved with number: " + logLines);
+										"Lainaus tallennettu numerolla: " + logLines);
 								break;
 							}
 							atIndex++;
@@ -249,21 +274,23 @@ public class SmicheBot extends PircBot {
 					e.printStackTrace();
 				}
 				return;
-			} else if (message.startsWith("<pquote")) {
+			} else if (message.startsWith("<plainaus")) {
 				try {
-					String text = message.replaceAll("<pquote ", "");
+					String text = message.replaceAll("<plainaus ", "");
 					int num = Integer.parseInt(text);
 					sendMessage(channel, getLine(num));
 				} catch (Exception localException1) {
 				}
 				return;
-			} else if ((message.startsWith("<translate"))
-					|| (message.equalsIgnoreCase("<translate"))) {
-				String txt = message.replaceAll("<translate ", "");
+			} else if (message.startsWith("<k‰‰nn‰") || message.startsWith("<kaana") 
+					|| message.equalsIgnoreCase("<kaana")
+					|| (message.equalsIgnoreCase("<k‰‰nn‰"))) {
+				String txt = message.replaceAll("<k‰‰nn‰ ", "");
+				message.replaceAll("<kaana ", "");
 				if (txt.equalsIgnoreCase("fi")) {
 					try {
 						String msg = (log.get(log.size() - 1)).message;
-						System.out.println("message is:" + msg);
+						System.out.println("viesti on:" + msg);
 						String text = translate.translate(msg, "en", "fi");
 						sendMessage(channel, (log.get(log.size() - 1)).sender
 								+ ": " + text);
@@ -305,7 +332,7 @@ public class SmicheBot extends PircBot {
 	}
 
 	public String getStreams() {
-		String a = "Online streams are:";
+		String a = "P‰‰ll‰ olevat streamit:";
 		for (int i = 0; i < streams.size(); i++) {
 			if (streams.get(i).isOnline) {
 				a += " " + streams.get(i).channel;
