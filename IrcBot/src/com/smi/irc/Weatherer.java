@@ -1,3 +1,4 @@
+package com.smi.irc;
 import java.io.IOException;
 
 import org.json.JSONException;

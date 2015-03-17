@@ -1,3 +1,4 @@
+package com.smi.irc;
 import org.nikki.omegle.Omegle;
 import org.nikki.omegle.core.OmegleException;
 import org.nikki.omegle.core.OmegleMode;

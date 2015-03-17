@@ -1,3 +1,4 @@
+package com.smi.irc;
 import java.sql.Timestamp;
 import java.util.Date;
 

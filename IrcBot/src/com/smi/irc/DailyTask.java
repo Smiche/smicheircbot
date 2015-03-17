@@ -1,3 +1,4 @@
+package com.smi.irc;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -49,7 +50,7 @@ public class DailyTask{
 	  sched.start(); 
 	  // define the job and tie it to our HelloJob class 
 	  JobDetail job = newJob(TaskFirst.class) 
-	      .withIdentity("myJob", "group1") 
+	      .withIdentity("myJob", "group2") 
 	      .build(); 
 	  // Trigger the job to run now, and then every 40 seconds 
 	  Date date = new Date();
@@ -59,7 +60,7 @@ public class DailyTask{
 	  DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 	  System.out.println(dateFormat.format(date));
 	  Trigger trigger = newTrigger() 
-	      .withIdentity("myTrigger", "group1") 
+	      .withIdentity("myTrigger", "group2") 
 	      .startAt(date)
 	      .withSchedule(simpleSchedule() 
 	          .withIntervalInHours(12)

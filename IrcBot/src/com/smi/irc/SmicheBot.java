@@ -1,3 +1,4 @@
+package com.smi.irc;
 import com.gtranslate.Translator;
 
 import java.io.BufferedReader;
@@ -145,7 +146,7 @@ public class SmicheBot extends PircBot {
             String login,
             String hostname){
 		if(channel.equals(this.channel) && sender.equals(getNick())){
-			sendMessage(channel, "SmiBotti final 15.3.8 has joined. Use <help to see the avaliable commands.");
+			sendMessage(channel, "SmiBotti beta 15.3.8 has joined. Use <help to see the avaliable commands.");
 			
 			try {
 				DailyTask.setTask();

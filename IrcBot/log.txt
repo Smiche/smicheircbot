@@ -52,3 +52,260 @@
 <2015-03-08 16:26:09.271>Smiche: http://openweathermap.org/
 <2015-03-08 16:26:09.494>botti: 0,10  OpenWeatherMap current weather and forecast
 <2015-03-08 16:26:25.89>Smiche: fetching from there
+<2015-03-14 22:05:55.491>tuolijakkara: :D 
+<2015-03-14 22:05:57.486>Smiche: news take time
+<2015-03-14 22:05:58.46>morzz: wtf
+<2015-03-14 22:05:58.682>EvilWalrus: >neekeri
+<2015-03-14 22:05:59.129>Smiche: to fetch
+<2015-03-14 22:06:08.273>EvilWalrus: idiot retard bot
+<2015-03-14 22:06:13.891>Smiche: needs a restart
+<2015-03-14 22:06:14.494>EvilWalrus: shit commuunism quality
+<2015-03-14 22:06:15.036>EvilWalrus: -.-
+<2015-03-14 22:06:16.946>zetori: 9gag
+<2015-03-14 22:06:28.191>zetori: :D
+<2015-03-14 22:06:34.839>Smiche: nooo
+<2015-03-14 22:06:36.993>tuolijakkara: ,,
+<2015-03-14 22:06:37.661>Smiche: just tuolijakkara
+<2015-03-14 22:06:40.96>botti: 0,10  Girl tell friend about "gangbangs" hilarity ensues - 9GAG
+<2015-03-14 22:06:49.038>Smiche: and u don't even need the a with dots
+<2015-03-14 22:07:24.999>Smiche: ok it just crashed :)
+<2015-03-14 22:07:25.222>EvilWalrus: >micel
+<2015-03-14 22:07:26.281>tuolijakkara: rip mickel
+<2015-03-14 22:07:27.786>EvilWalrus: >cauupuunci:D
+<2015-03-14 22:07:29.161>Harshmouse: h4h4h4
+<2015-03-14 22:07:29.408>EvilWalrus: choose 12
+<2015-03-14 22:07:56.836>Smiche: oh it recovered from the crash
+<2015-03-14 22:07:56.837>morzz: uu uu uu
+<2015-03-14 22:07:56.837>Smiche: :D
+<2015-03-14 22:07:56.838>Harshmouse: 0 work
+<2015-03-14 22:08:26.669>Smiche: wtf it used to find cities few days ago -.-
+<2015-03-14 22:08:55.606>Smiche: oh wait
+<2015-03-14 22:08:56.204>tuolijakkara: rip moscow
+<2015-03-14 22:08:59.17>Smiche: the weather site is dead
+<2015-03-14 22:09:08.157>Smiche: http://api.openweathermap.org/
+<2015-03-14 22:09:08.503>Smiche: gg
+<2015-03-14 22:09:10.502>botti: 0,10  404 Not Found
+<2015-03-14 22:10:17.738>zetori: SmiBotti: "botti" is more stable :D
+<2015-03-14 22:10:22.307>zetori: smiche*
+<2015-03-14 22:10:32.603>Smiche: that is true
+<2015-03-14 22:10:38.655>Smiche: I'm trying to provide more things though
+<2015-03-14 22:10:45.808>Smiche: also the weather api is out of my reach
+<2015-03-14 22:10:50.53>Smiche: their site is down not my problem
+<2015-03-14 22:10:57.138>Smiche: and streams work 100% no problem with them o.0
+<2015-03-14 22:11:31.82>zetori: joe@ircbot:~$ uptime 16:11:27 up 172 days, 16:30,  1 user,  load average: 0.08, 0.03, 0.05
+<2015-03-14 22:11:34.815>zetori: =)
+<2015-03-14 22:11:55.011>Smiche: :D:D
+<2015-03-14 22:12:17.624>Smiche: check for Q
+<2015-03-14 22:12:18.068>Smiche: :D
+<2015-03-14 22:12:25.486>zetori: i dont own it
+<2015-03-14 22:12:28.947>Smiche: oh
+<2015-03-14 22:12:29.615>Smiche: ok
+<2015-03-14 22:13:42.46>EvilWalrus: Smiche are you gaymer ???
+<2015-03-14 22:13:42.461>Smiche: I is many gayme
+<2015-03-14 22:13:48.757>Smiche: Error: Connection timed out: connect
+<2015-03-14 22:13:50.041>zetori: Harshmouse: 15h46min pääst finu d:D
+<2015-03-14 22:13:59.31>Smiche: the api for the weather seems to be down
+<2015-03-14 22:14:07.86>Smiche: can you open this site 
+<2015-03-14 22:14:22.359>Smiche: http://api.openweathermap.org/data/2.5/weather?q=mikkeli,FI
+<2015-03-14 22:14:36.432>Smiche: no news are preloaded yet
+<2015-03-14 22:14:36.999>zetori: ^siika
+<2015-03-14 22:14:41.979>morzz: not opening
+<2015-03-14 22:14:43.512>LizardSquad: Hello
+<2015-03-14 22:14:44.625>Smiche: not siikas ip
+<2015-03-14 22:14:56.238>LizardSquad: im julius
+<2015-03-14 22:14:57.129>zetori: maybe siika's mobile
+<2015-03-14 22:14:57.351>Smiche: he is on mpynet.fi
+<2015-03-14 22:15:05.06>Smiche: mobile says @ android
+<2015-03-14 22:15:09.836>lkt: Who is julius
+<2015-03-14 22:15:18.541>Smiche: okay now you have news
+<2015-03-14 22:15:20.712>EvilWalrus: hello siick
+<2015-03-14 22:15:24.652>LizardSquad: julius from lizard squad
+<2015-03-14 22:15:27.645>zetori: yes its siika
+<2015-03-14 22:15:30.121>lkt: rip pilkker
+<2015-03-14 22:15:31.221>LizardSquad: XDDD
+<2015-03-14 22:15:42.614>LizardSquad: VIHAAN JYVÄSKYLÄÄ
+<2015-03-14 22:15:45.32>zetori: siika mitä mielt salkkari synnytyksest
+<2015-03-14 22:15:49.498>zetori: ei ees napanuoraa tarvinnu leikata
+<2015-03-14 22:16:04.304>LizardSquad: En oo kattonu XD
+<2015-03-14 22:16:07.318>zetori: :DD
+<2015-03-14 22:16:33.834>LizardSquad: huomen kämpil vois kattoo. ny oon vaa seeässää katellu
+<2015-03-14 22:16:56.232>Smiche: RIP putin
+<2015-03-14 22:19:16.099>lkt: axaxaxaxa cyxa pidar putin ))
+<2015-03-14 22:19:26.103>Smiche: blyat
+<2015-03-14 22:28:56.487>zetori: :o
+<2015-03-14 22:28:57.6>Smiche: try with a number
+<2015-03-14 22:29:22.181>Smiche: spam
+<2015-03-14 22:30:08.185>zetori: owm sucks XD
+<2015-03-14 22:30:11.899>Smiche: the weather server is dead
+<2015-03-14 22:30:22.964>Smiche: well yup but google weather service is paid
+<2015-03-14 22:30:26.013>Smiche: and I don't know any others
+<2015-03-14 22:32:14.166>zetori: really..
+<2015-03-14 22:44:29.53>Harshmouse: Evilwalrus miks pelaat jotai talorakennus pelii ,,,
+<2015-03-14 22:44:34.039>Harshmouse: voisit pelaa vaik simssii,,
+<2015-03-14 22:48:22.238>EvilWalrus: ,,,
+<2015-03-14 22:50:49.275>tuolijakkara: wtf walrus..
+<2015-03-14 22:50:55.544>tuolijakkara: are u autist
+<2015-03-14 22:50:56.155>EvilWalrus: wtf ,,,
+<2015-03-14 22:51:01.822>EvilWalrus: tätä voi pelaa samalku kattoo stream
+<2015-03-14 22:51:02.618>EvilWalrus: -.-
+<2015-03-14 23:00:35.456>morzz: sun simsit kuolee
+<2015-03-14 23:00:39.733>morzz: jos et ruoki niit�
+<2015-03-14 23:00:48.432>tuolijakkara: lkt
+<2015-03-14 23:00:57.008>lkt: ni
+<2015-03-14 23:01:15.946>tuolijakkara: mitä mielt ku hltv forumeil vaa flametaaa alluu
+<2015-03-14 23:01:16.391>tuolijakkara: :D
+<2015-03-14 23:01:34.87>Harshmouse: > lukee hltv:D
+<2015-03-14 23:01:35.539>lkt: aika sama
+<2015-03-14 23:01:47.903>tuolijakkara: jep
+<2015-03-14 23:01:52.885>tuolijakkara: toi hltv forum iha joke
+<2015-03-14 23:02:14.103>morzz: onks nip kussu
+<2015-03-14 23:02:20.984>tuolijakkara: ei
+<2015-03-14 23:02:59.55>tuolijakkara: xizt peleil
+<2015-03-14 23:08:27.046>tuolijakkara: tulee olee kyl aika vaikee nipin voittaa fnatic
+<2015-03-14 23:09:13.477>morzz: viel�ks VP on pelei
+<2015-03-14 23:09:28.463>tuolijakkara: ei 
+<2015-03-14 23:09:33.865>tuolijakkara: 3rd place matsii ei pelata
+<2015-03-14 23:11:43.882>tuolijakkara: envy iha hyvä Kappa
+<2015-03-14 23:13:49.182>tuolijakkara: allu kyl aika manlet
+<2015-03-14 23:17:20.849>Harshmouse: niiku sä,ahahaah
+<2015-03-14 23:17:49.564>tuolijakkara: oot ite 160cm mietis nyt
+<2015-03-14 23:39:05.786>qkko: ebin koulutoverikaveri
+<2015-03-14 23:48:33.012>qkko: guardianin toimittaja http://i.imgur.com/rJpF1Xe.jpg
+<2015-03-14 23:51:53.401>qkko: noita jotka uskoo et euroopas ei ollu valkosii keski-ajal on iha valtavasti
+<2015-03-14 23:52:05.22>qkko: mistä ne aattelee et me sit ilmestyttii? 0 clue
+<2015-03-14 23:52:18.532>lkt: ollaa ufoi
+<2015-03-14 23:52:21.225>morzz: tapahtu mutaatio ja kaikki muuttu valkosiks
+<2015-03-14 23:52:45.939>Jebah: :DD
+<2015-03-14 23:52:47.605>tuolijakkara: wtf:D
+<2015-03-14 23:52:51.545>Jebah: siis tota
+<2015-03-14 23:53:00.329>EvilWalrus: all are niggers inside:D
+<2015-03-14 23:53:02.409>Jebah: referoi varmaa siihe et osmaani valtakunnat hallitsi
+<2015-03-14 23:53:05.916>Jebah: suurt osaa euroopast
+<2015-03-14 23:53:15.723>Jebah: viel after 1000 luvu alku vuosisadoil
+<2015-03-14 23:53:20.723>tuolijakkara: nii eteelä-eurooppaa
+<2015-03-14 23:53:24.035>Jebah: jep
+<2015-03-14 23:53:25.716>EvilWalrus: Harshmouse nice gamee:DDD
+<2015-03-14 23:53:28.312>EvilWalrus: go larp lenck:DD
+<2015-03-14 23:53:31.292>EvilWalrus: go ruun ingame:DD
+<2015-03-14 23:53:33.001>tuolijakkara: mut scandianavia + brits ja saksaa full white
+<2015-03-14 23:53:51.223>Harshmouse: still better than sims
+<2015-03-14 23:54:30.405>tuolijakkara: gg olin saanu d2 souvenir
+<2015-03-14 23:54:35.27>tuolijakkara: haha
+<2015-03-14 23:54:36.305>Harshmouse: gtfo
+<2015-03-14 23:54:38.757>tuolijakkara: 2 souvenirs jo
+<2015-03-14 23:54:39.324>tuolijakkara: =)
+<2015-03-14 23:54:46.281>Harshmouse: hope u get hacked
+<2015-03-14 23:55:37.063>EvilWalrus: hack coming 
+<2015-03-14 23:56:19.344>tuolijakkara: nice sand mesh scar 20
+<2015-03-14 23:56:20.945>tuolijakkara: thank
+<2015-03-14 23:56:29.168>morzz: avasitko :D
+<2015-03-14 23:56:35.924>tuolijakkara: joo
+<2015-03-14 23:56:39.091>tuolijakkara: avasin sen edellisenki
+<2015-03-14 23:56:41.373>morzz: retar
+<2015-03-14 23:56:43.836>morzz: mit� sait ekast
+<2015-03-14 23:56:52.154>tuolijakkara: retart
+<2015-03-14 23:56:55.118>tuolijakkara: ne on jotia pari euroo
+<2015-03-14 23:56:58.031>tuolijakkara: cobblee en avais
+<2015-03-14 23:57:09.236>tuolijakkara: sg fallout warnir
+<2015-03-14 23:57:20.701>morzz: se on iha nice
+<2015-03-14 23:57:33.899>morzz: mul k�yt�s tavalline fallout warning sg atm
+<2015-03-14 23:57:43.826>tuolijakkara: heh3
+<2015-03-14 23:57:50.568>morzz: mitk� tarrat siin
+<2015-03-14 23:58:33.58>EvilWalrus: are you kids -.-
+<2015-03-14 23:58:48.293>tuolijakkara: esl one (gold) envy (gold) lgb (gold)
+<2015-03-14 23:59:09.978>tuolijakkara: scaris nip ja envy
+<2015-03-14 23:59:28.825>morzz: 0 vp tarr 0 w�rt
+<2015-03-14 23:59:35.709>tuolijakkara: vp shit team.
+<2015-03-14 23:59:47.19>tuolijakkara: huomen vois tulle cobble mapiks ja saada semmone
+<2015-03-14 23:59:58.554>morzz: et saa kolmatta, ,
+<2015-03-15 00:00:22.207>tuolijakkara: :)
+<2015-03-15 00:00:56.824>Jebah: sipsit on loppu t juhis
+<2015-03-15 00:00:59.884>Jebah: sipsit ei oo loppu t juhis
+<2015-03-15 00:02:05.371>morzz: oispa sips
+<2015-03-15 00:24:34.147>HES`: Thanks for applying to the Twitch Partner Program! We have reviewed your content and statistics, and think you’d make a great fit.
+<2015-03-15 00:24:36.155>HES`: You will shortly receive a form via email which we need you to fill out in order for us to send over an agreement and tax form.
+<2015-03-15 00:24:40.201>HES`: After completion of the form, please respond to this email for confirmation purposes.
+<2015-03-15 00:24:42.138>HES`: While you wait, please be sure to familiarize yourself with our Terms of Service. Every broadcaster is expected to conform to these guidelines, and egregious violation will result in removal of your partnership and broadcasting 
+<2015-03-15 00:24:44.212>HES`: se ois sit: subbutton
+<2015-03-15 00:25:09.076>morzz: wooooot
+<2015-03-15 00:25:10.091>morzz: nice
+<2015-03-15 00:25:32.474>tuolijakkara: wow
+<2015-03-15 00:25:34.63>tuolijakkara: nice
+<2015-03-15 00:26:09.978>tuolijakkara: 24h sub button stream 
+<2015-03-15 00:28:09.974>DMAM: HES`
+<2015-03-15 00:28:11.066>DMAM: paljo sul o
+<2015-03-15 00:28:13.896>DMAM: avg. viewers
+<2015-03-15 00:31:28.572>HES`: joku
+<2015-03-15 00:31:30.649>HES`: 200 vähintää yleensä
+<2015-03-15 00:33:13.772>Jebah: huhhu nice HES`
+<2015-03-15 00:33:25.636>Jebah: tuleeko andypyro lapse naama sub emoteks
+<2015-03-15 00:33:29.191>Jebah: Elviira900
+<2015-03-15 00:33:30.949>tuolijakkara: :DD
+<2015-03-15 00:33:31.839>Jebah: ois imo iha hyv
+<2015-03-15 00:35:33.155>morzz: miten ne menee et voiko vaihtaa emotei kuin usein
+<2015-03-15 00:35:38.638>morzz: tai laittaa uusii
+<2015-03-15 00:35:49.326>DMAM: pitää olla joku määrä subei et saa enemmä emotei
+<2015-03-15 00:35:53.701>DMAM: emt mikä se default määrä on
+<2015-03-15 00:36:31.215>morzz: ent� voiko niit vaihtaa miten vaa
+<2015-03-15 00:37:11.775>Harshmouse: kuha twitch approvaa sen nii voikai
+<2015-03-15 00:42:48.795>CewiaD: ränks upppiii
+<2015-03-15 00:43:59.49>zetori: tos buttonin saamises menee joku viikko ainaki :D
+<2015-03-15 00:44:26.131>HES`: 3pv zetori max
+<2015-03-15 00:44:33.633>HES`: uskon et viimeistää maanantain ku niil duunii
+<2015-03-15 00:44:34.257>zetori: kotifaijal meni yli viikko
+<2015-03-15 00:44:49.673>HES`: jep mut kotifaija on kotifaija
+<2015-03-15 00:45:43.982>zetori: silläki luki mailis jotai et few days
+<2015-03-15 00:45:49.585>zetori: xd
+<2015-03-15 00:51:50.62>morzz: laita kunnolliset emotet eik� mit�� tuherruksii
+<2015-03-15 00:52:01.101>HES`: jep
+<2015-03-15 00:55:35.545>zetori: saatko olla enää toxic streameis ku o soppari
+<2015-03-15 00:55:50.308>zetori: vai rikkooks ToS
+<2015-03-15 00:56:17.498>morzz: eiks siel oo et pit�� noudattaa pelin s��nt�i
+<2015-03-15 00:56:21.532>morzz: varmaan sit� kaut
+<2015-03-15 00:59:59.772>HES`: kai mä flamee saan
+<2015-03-15 01:00:04.253>HES`: kuha en twitchin palvelun sisäl
+<2015-03-15 01:00:07.583>HES`: hyökkää muit vastaa
+<2015-03-15 01:21:50.036>zetori: morzz: on tuol ainaki "Content that is unlawful, libelous, defamatory, obscene, pornographic, indecent, lewd, suggestive, harassing, threatening, invasive of privacy or publicity rights, abusive, inflammatory, fraudulent or otherwise objectionable;"
+<2015-03-15 01:22:01.673>DMAM: EvilWalrus congratulations on platinum elo! 
+<2015-03-15 01:22:07.925>DMAM: lähit clientist nii en voinu onnitella siellä..
+<2015-03-15 01:22:14.913>tuolijakkara: :DD
+<2015-03-15 01:22:26.684>zetori: ^dossasin
+<2015-03-15 01:22:42.453>morzz: ite oisin kyl flameematta sit
+<2015-03-15 01:22:46.71>morzz: vituttais jos heti l�htis subit
+<2015-03-15 01:23:46.581>EvilWalrus: DMAM thank !!
+<2015-03-15 01:24:25.387>DMAM: soon we can maybe duoq if you get out of elohell first
+<2015-03-15 01:24:44.093>EvilWalrus: wtf ,,,
+<2015-03-15 01:24:52.173>EvilWalrus: already escaped elo hell and gotted high elo ? 
+<2015-03-15 01:24:59.217>DMAM: sit ku oot d5
+<2015-03-15 01:25:01.079>DMAM: nii voidaa duoo
+<2015-03-15 01:25:02.986>EvilWalrus: ,, ,
+<2015-03-15 01:25:03.656>DMAM: c: 
+<2015-03-15 01:25:12.165>DMAM: tai sanotaa vaik
+<2015-03-15 01:25:13.085>DMAM: plat 1
+<2015-03-15 01:25:13.84>DMAM: ...
+<2015-03-15 01:25:14.064>EvilWalrus: no täl pelimääräl
+<2015-03-15 01:25:15.884>EvilWalrus: ehq tos
+<2015-03-15 01:25:19.617>EvilWalrus: just enne nxt resettii
+<2015-03-15 01:25:22.666>DMAM: NICE!
+<2015-03-15 01:25:43.866>tuolijakkara: :)
+<2015-03-15 01:26:21.339>EvilWalrus: pitää vissii mennä grindaamaa !! heh !
+<2015-03-15 01:26:51.465>EvilWalrus: mul average cs 215-.-
+<2015-03-15 01:26:53.655>EvilWalrus: = pro gamer -.-
+<2015-03-15 01:27:02.88>DMAM: mul o joku 270 jos en oo support X_X 
+<2015-03-15 01:27:07.659>DMAM: harmi vaa et 95% peleist support
+<2015-03-15 01:27:33.265>DMAM: nyt oon alkanu farmaa viel paremmi jos oon adc...
+<2015-03-15 01:27:34.902>EvilWalrus: nii mulki tos kyl suppo ja junglepelit mukan -.-
+<2015-03-15 01:27:37.995>DMAM: vedän joka pelis joku 10cs min
+<2015-03-15 01:28:12.129>DMAM: emt lasketaanks sivirii kyl toho
+<2015-03-15 01:28:16.908>DMAM: ku sil saa vammanenki 10cs min 
+<2015-03-15 01:28:29.62>DMAM: auto w q :D oho wave kuoli :D midii farmaa :D 
+<2015-03-15 01:30:32.764>EvilWalrus: loli kyl
+<2015-03-15 01:30:36.193>EvilWalrus: paska peli pelaa soloq
+<2015-03-15 01:30:36.777>EvilWalrus: -.-
+<2015-03-15 01:30:47.59>EvilWalrus: duoq pelaa pal jo mielummi -.-
+<2015-03-15 01:30:53.211>EvilWalrus: vaik se toine oiski jokuu legit eloheller
+<2015-03-15 04:20:50.08>zetori: lol
+<2015-03-15 05:45:55.203>CewiaD: blazeit bot
+<2015-03-15 06:50:35.727>jjuhis: http://www.iltasanomat.fi/muutlajit/art-1426316580885.html?pos=ok-nln
+<2015-03-15 06:50:35.949>botti: 0,10  Kiihdytysauto lähti lentoon hurjassa kolarissa – vauhtia jopa 420 km/h - Muut urheilulajit - Ilta-Sanomat
+<2015-03-15 06:50:37.06>jjuhis: sattumaako

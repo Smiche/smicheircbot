@@ -1,3 +1,4 @@
+package com.smi.irc;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -256,7 +257,7 @@ public class Main extends JFrame {
 	private static Image getIcon() throws HeadlessException {
 		Image img = null;
 		try {
-			img = ImageIO.read(Main.class.getResource("/src/resources/icon.png"));
+			img = ImageIO.read(Main.class.getResource("/resources/icon.png"));
 			
 		} catch (IOException e2) {
 			e2.printStackTrace();
@@ -294,8 +295,7 @@ public class Main extends JFrame {
 	static void startBot(String network, String nick, String channel)
 			throws Exception { // smooth
 		
-		String log4jConfPath = "/resources/log4j.properties";
-		PropertyConfigurator.configure(Main.class.getResource("/src/resources/log4j.properties"));
+		PropertyConfigurator.configure(Main.class.getResource("/resources/log4j.properties"));
 		chan = channel;
 		bot = new SmicheBot(nick, channel);
 		bot.setVerbose(true);
@@ -311,7 +311,7 @@ public class Main extends JFrame {
 			bot.dispose();
 			bot = null;
 		} catch (NullPointerException e) {
-
+				
 		}
 	}
 }

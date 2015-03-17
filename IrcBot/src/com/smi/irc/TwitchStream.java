@@ -1,3 +1,4 @@
+package com.smi.irc;
 public class TwitchStream {
 	boolean isOnline = false;
 	String channel;
